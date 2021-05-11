@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR-test-app</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="startvideo-component.js"></script>
+    <script src="animation-mixer.js"></script>
+  </head>
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene arjs="debugUIEnabled: false;" cursor="rayOrigin: mouse">
+      <a-assets>
+        <a-asset-item
+          id="cube1-model"
+          src="assets/logo/Cube1.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="cube2-model"
+          src="assets/logo/Cube2.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="cube3-model"
+          src="assets/logo/Cube3.glb"
+        ></a-asset-item>
+        <a-asset-item id="is-model" src="assets/logo/IS.glb"></a-asset-item>
+        <a-asset-item id="in-model" src="assets/buttons/In.obj"></a-asset-item>
+        <a-asset-item
+          id="in-material"
+          src="assets/buttons/In.mtl"
+        ></a-asset-item>
+        <a-asset-item
+          id="mail-model"
+          src="assets/buttons/Mail.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="mail-material"
+          src="assets/buttons/Mail.mtl"
+        ></a-asset-item>
+        <a-asset-item
+          id="phone-model"
+          src="assets/buttons/Phone.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="phone-material"
+          src="assets/buttons/Phone.mtl"
+        ></a-asset-item>
+        <a-asset-item
+          id="tg-model"
+          src="assets/buttons/Telegram.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="tg-material"
+          src="assets/buttons/Telegram.mtl"
+        ></a-asset-item>
+        <video id="intro" loop="false" src="assets/video/MediumBit.mp4"></video>
+      </a-assets>
+      <a-marker preset="hiro">
+        <a-entity
+          animation-mixer="loop: once"
+          position="-0.05 1.08 0"
+          rotation="0 355 355"
+          scale="1 1 1"
+          gltf-model="#cube1-model"
+        ></a-entity>
+        <a-entity
+          animation-mixer="loop: once"
+          position="0 1.08 0"
+          rotation="0 355 355"
+          scale="1 1 1"
+          gltf-model="#cube2-model"
+        ></a-entity>
+        <a-entity
+          animation-mixer="loop: once"
+          position="0.05 1.08 0"
+          rotation="0 355 355"
+          scale="1 1 1"
+          gltf-model="#cube3-model"
+        ></a-entity>
+        <a-entity
+          animation-mixer="loop: once"
+          position="0 1.08 0"
+          rotation="0 355 355"
+          scale="1 1 1"
+          gltf-model="#is-model"
+        ></a-entity>
+        <a-video
+          vidhandler
+          src="#intro"
+          width="1.25"
+          height="0.5"
+          position="0 0.5 0.1"
+          rotation="0 355 0"
+        ></a-video>
+        <a-entity
+          position="0.45 0 0"
+          scale="0.25 0.25 0.25"
+          obj-model="obj: #tg-model; mtl: #tg-material"
+          rotation="0 0 355"
+          animation="property: rotation; to: 0 360 355; loop: true; dur: 2500"
+        >
+        </a-entity>
+        <a-entity
+          position="-0.45 0 0"
+          scale="0.25 0.25 0.25"
+          obj-model="obj: #in-model; mtl: #in-material"
+          rotation="0 0 355"
+          animation="property: rotation; to: 0 360 355; loop: true; dur: 2500"
+        >
+        </a-entity>
+        <a-entity
+          position="-0.15 0 0"
+          scale="0.25 0.25 0.25"
+          obj-model="obj: #mail-model; mtl: #mail-material"
+          rotation="0 0 355"
+          animation="property: rotation; to: 0 360 355; loop: true; dur: 2500"
+        >
+        </a-entity
+        >>
+        <a-entity
+          position="0.15 0 0"
+          scale="0.25 0.25 0.25"
+          obj-model="obj: #phone-model; mtl: #phone-material"
+          rotation="0 0 355"
+          animation="property: rotation; to: 0 360 355; loop: true; dur: 2500"
+        >
+        </a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
+</html>
