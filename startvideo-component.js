@@ -7,6 +7,7 @@ AFRAME.registerComponent("vidhandler", {
     if (
       document.querySelector("a-marker").object3D.visible == true &&
       document.querySelector("a-video").object3D.visible == true
+      // document.querySelector(".animated").object3D.timescale == 0
     ) {
       if (!this.toggle) {
         this.toggle = true;

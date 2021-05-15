@@ -14,7 +14,7 @@
     <script src="animation-mixer.js"></script>
   </head>
   <body style="margin: 0px; overflow: hidden">
-    <a-scene arjs="debugUIEnabled: false;" cursor="rayOrigin: mouse">
+    <a-scene arjs="debugUIEnabled: false;" cursor="rayOrigin: mouse" animhandler>
       <a-assets>
         <a-asset-item
           id="cube1-model"
@@ -63,40 +63,37 @@
       <a-marker preset="hiro">
         <a-entity
           class="animated"
-          animhandler
-          animation-mixer = "loop: once; duration: 15;"
+          animation-mixer = "loop: once; duration: 10;"
           position="-0.05 1.08 0"
           rotation="0 355 355"
           scale="1 1 1"
           gltf-model="#cube1-model"
        ></a-entity>
         <a-entity
-          class="animated1"
-          animhandler
-          animation-mixer = "loop: once; duration: 15 "
+          class="animated"
+          animation-mixer = "loop: once; duration: 10 "
           position="0 1.08 0"
           rotation="0 355 355"
           scale="1 1 1"
           gltf-model="#cube2-model"
         ></a-entity>
         <a-entity
-          class="animated2"
-          animhandler
-          animation-mixer = "loop: once; duration: 15 "
+          class="animated"
+          animation-mixer = "loop: once; duration: 10 "
           position="0.05 1.08 0"
           rotation="0 355 355"
           scale="1 1 1"
           gltf-model="#cube3-model"
         ></a-entity>
         <a-entity
-          class="animated3"
-          animhandler
-          animation-mixer = "loop: once; duration: 15 "
+          class="animated"
+          animation-mixer = "loop: once; duration: 10 "
           position="0 1.08 0"
           rotation="0 355 355"
           scale="1 1 1"
           gltf-model="#is-model"
         ></a-entity>
+        
         <a-video
           vidhandler
           src="#intro"
