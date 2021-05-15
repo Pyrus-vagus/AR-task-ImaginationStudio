@@ -10,6 +10,7 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="startvideo-component.js"></script>
+    <script src="animation-handler.js"></script>
     <script src="animation-mixer.js"></script>
   </head>
   <body style="margin: 0px; overflow: hidden">
@@ -61,28 +62,36 @@
       </a-assets>
       <a-marker preset="hiro">
         <a-entity
-          animation-mixer="loop: once"
+          class="animated"
+          animhandler
+          animation-mixer = "loop: once; duration: 15;"
           position="-0.05 1.08 0"
           rotation="0 355 355"
           scale="1 1 1"
           gltf-model="#cube1-model"
-        ></a-entity>
+       ></a-entity>
         <a-entity
-          animation-mixer="loop: once"
+          class="animated1"
+          animhandler
+          animation-mixer = "loop: once; duration: 15 "
           position="0 1.08 0"
           rotation="0 355 355"
           scale="1 1 1"
           gltf-model="#cube2-model"
         ></a-entity>
         <a-entity
-          animation-mixer="loop: once"
+          class="animated2"
+          animhandler
+          animation-mixer = "loop: once; duration: 15 "
           position="0.05 1.08 0"
           rotation="0 355 355"
           scale="1 1 1"
           gltf-model="#cube3-model"
         ></a-entity>
         <a-entity
-          animation-mixer="loop: once"
+          class="animated3"
+          animhandler
+          animation-mixer = "loop: once; duration: 15 "
           position="0 1.08 0"
           rotation="0 355 355"
           scale="1 1 1"
