@@ -12,9 +12,11 @@
     <script src="startvideo-component.js"></script>
     <script src="animation-handler.js"></script>
     <script src="animation-mixer.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="navigate-on-click.js"></script>
   </head>
   <body style="margin: 0px; overflow: hidden">
-    <a-scene arjs="debugUIEnabled: false;" cursor="rayOrigin: mouse" animhandler>
+    <a-scene arjs="debugUIEnabled: false;" cursor="rayOrigin: mouse" animhandler link-controls>
       <a-assets>
         <a-asset-item
           id="cube1-model"
@@ -60,10 +62,11 @@
         ></a-asset-item>
         <video id="intro" loop="false" src="assets/video/MediumBit.mp4"></video>
       </a-assets>
+      <a-entity camera look-controls cursor="rayOrigin: mouse"></a-entity>
       <a-marker preset="hiro">
         <a-entity
           class="animated"
-          animation-mixer = "loop: once; duration: 10;"
+          animation-mixer = "loop: pingpong; duration: 5; repetitions: 2;"
           position="-0.05 1.08 0"
           rotation="0 355 355"
           scale="1 1 1"
@@ -71,7 +74,7 @@
        ></a-entity>
         <a-entity
           class="animated"
-          animation-mixer = "loop: once; duration: 10 "
+          animation-mixer = "loop: pingpong; duration: 5; repetitions: 2; "
           position="0 1.08 0"
           rotation="0 355 355"
           scale="1 1 1"
@@ -79,7 +82,7 @@
         ></a-entity>
         <a-entity
           class="animated"
-          animation-mixer = "loop: once; duration: 10 "
+          animation-mixer = "loop: pingpong; duration: 5; repetitions: 2; "
           position="0.05 1.08 0"
           rotation="0 355 355"
           scale="1 1 1"
@@ -87,7 +90,7 @@
         ></a-entity>
         <a-entity
           class="animated"
-          animation-mixer = "loop: once; duration: 10 "
+          animation-mixer = "loop: pingpong; duration: 5; repetitions: 2; "
           position="0 1.08 0"
           rotation="0 355 355"
           scale="1 1 1"
@@ -101,42 +104,50 @@
           height="0.5"
           position="0 0.5 0.1"
           rotation="0 355 0"
-        ></a-video>
+          ></a-video>
         <a-entity
+        
           position="0.45 0 0"
           scale="0.25 0.25 0.25"
           obj-model="obj: #tg-model; mtl: #tg-material"
           rotation="0 0 355"
           animation="property: rotation; to: 0 360 355; loop: true; dur: 2500"
+          navigate-on-click="url: https://glitch.com/edit/#!/a-frame-click-navigate?path=index.html%3A46%3A55"
         >
         </a-entity>
         <a-entity
+        
           position="-0.45 0 0"
           scale="0.25 0.25 0.25"
           obj-model="obj: #in-model; mtl: #in-material"
           rotation="0 0 355"
           animation="property: rotation; to: 0 360 355; loop: true; dur: 2500"
+          navigate-on-click="url: https://glitch.com/edit/#!/a-frame-click-navigate?path=index.html%3A46%3A55"
         >
         </a-entity>
         <a-entity
+        
           position="-0.15 0 0"
           scale="0.25 0.25 0.25"
           obj-model="obj: #mail-model; mtl: #mail-material"
           rotation="0 0 355"
           animation="property: rotation; to: 0 360 355; loop: true; dur: 2500"
+          navigate-on-click="url: https://glitch.com/edit/#!/a-frame-click-navigate?path=index.html%3A46%3A55"
         >
         </a-entity
-        >>
+        >
         <a-entity
+       
           position="0.15 0 0"
           scale="0.25 0.25 0.25"
           obj-model="obj: #phone-model; mtl: #phone-material"
           rotation="0 0 355"
           animation="property: rotation; to: 0 360 355; loop: true; dur: 2500"
+          navigate-on-click="url: https://glitch.com/edit/#!/a-frame-click-navigate?path=index.html%3A46%3A55"
         >
         </a-entity>
       </a-marker>
-      <a-entity camera></a-entity>
+      
     </a-scene>
   </body>
 </html>
