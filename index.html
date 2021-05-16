@@ -63,52 +63,52 @@
         <video id="intro" loop="false" src="assets/video/MediumBit.mp4"></video>
       </a-assets>
       <a-entity camera look-controls cursor="rayOrigin: mouse"></a-entity>
-      <a-marker preset="hiro">
+      <a-marker preset="custom" type="pattern" url="assets/marker/pattern-marker1.patt">
         <a-entity
           class="animated"
           animation-mixer = "loop: pingpong; duration: 5; repetitions: 2;"
-          position="-0.05 1.08 0"
+          position="-0.7 3.38 0"
           rotation="0 355 355"
-          scale="1 1 1"
+          scale="3 3 3"
           gltf-model="#cube1-model"
        ></a-entity>
         <a-entity
           class="animated"
           animation-mixer = "loop: pingpong; duration: 5; repetitions: 2; "
-          position="0 1.08 0"
+          position="0 3.38 0"
           rotation="0 355 355"
-          scale="1 1 1"
+          scale="5 5 5"
           gltf-model="#cube2-model"
         ></a-entity>
         <a-entity
           class="animated"
           animation-mixer = "loop: pingpong; duration: 5; repetitions: 2; "
-          position="0.05 1.08 0"
+          position="0.1 3.38 0"
           rotation="0 355 355"
-          scale="1 1 1"
+          scale="5 5 5"
           gltf-model="#cube3-model"
         ></a-entity>
         <a-entity
           class="animated"
           animation-mixer = "loop: pingpong; duration: 5; repetitions: 2; "
-          position="0 1.08 0"
+          position="0 3.38 0"
           rotation="0 355 355"
-          scale="1 1 1"
+          scale="5 5 5"
           gltf-model="#is-model"
         ></a-entity>
         
         <a-video
           vidhandler
           src="#intro"
-          width="1.25"
-          height="0.5"
+          width="4.15"
+          height="2.75"
           position="0 0.5 0.1"
           rotation="0 355 0"
           ></a-video>
         <a-entity
         
-          position="0.45 0 0"
-          scale="0.25 0.25 0.25"
+          position="0.6 -2 0"
+          scale="1 1 1"
           obj-model="obj: #tg-model; mtl: #tg-material"
           rotation="0 0 355"
           animation="property: rotation; to: 0 360 355; loop: true; dur: 2500"
@@ -117,8 +117,8 @@
         </a-entity>
         <a-entity
         
-          position="-0.45 0 0"
-          scale="0.25 0.25 0.25"
+          position="-1.75 -2 0"
+          scale="1 1 1"
           obj-model="obj: #in-model; mtl: #in-material"
           rotation="0 0 355"
           animation="property: rotation; to: 0 360 355; loop: true; dur: 2500"
@@ -127,8 +127,8 @@
         </a-entity>
         <a-entity
         
-          position="-0.15 0 0"
-          scale="0.25 0.25 0.25"
+          position="-0.6 -2 0"
+          scale="1 1 1"
           obj-model="obj: #mail-model; mtl: #mail-material"
           rotation="0 0 355"
           animation="property: rotation; to: 0 360 355; loop: true; dur: 2500"
@@ -138,8 +138,8 @@
         >
         <a-entity
        
-          position="0.15 0 0"
-          scale="0.25 0.25 0.25"
+          position="1.75 -2 0"
+          scale="1 1 1"
           obj-model="obj: #phone-model; mtl: #phone-material"
           rotation="0 0 355"
           animation="property: rotation; to: 0 360 355; loop: true; dur: 2500"
